@@ -124,10 +124,13 @@ p{margin:0;}
 }
 @media(min-width:768px){.hero{padding:96px 0 104px;}}
 .hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;
-  border-radius:9999px;padding:6px 16px;font-size:13px;font-weight:700;color:#141414;
-  background-image:linear-gradient(to right,var(--amber-500),var(--orange-500));
+.hero-logo{display:flex;align-items:center;gap:14px;text-align:left;}
+.hero-logo svg{width:52px;height:52px;flex:0 0 auto;filter:drop-shadow(0 6px 18px rgba(255,209,26,.25));}
+.hero-logo .hl-name{font-size:20px;font-weight:800;letter-spacing:-.01em;line-height:1.15;}
+.hero-logo .hl-sub{margin-top:3px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-400);}
+@media(max-width:520px){
+  .hero-logo .hl-name{font-size:17px;}
+  .hero-logo svg{width:44px;height:44px;}
 }
 .hero h1{margin:24px 0 16px;max-width:1000px;}
 .hero .gold{
@@ -388,7 +391,13 @@ footer{border-top:1px solid hsl(var(--border));padding:36px 0 28px;}
 <!-- ============ 1. HERO ============ -->
 <section class="hero" id="topo">
   <div class="wrap hero-inner">
-    <span class="badge">📖 Novo Guia de Claude na Prática: 1.900 Prompts Prontos a Usar</span>
+    <div class="hero-logo">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#FFD11A"/><path d="M21.1 11.8 A6.6 6.6 0 1 0 21.1 20.2 L21.1 16.4 L17.6 16.4" fill="none" stroke="#0A0A0A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <div class="hl-name">Novo Guia de Claude na Prática</div>
+        <div class="hl-sub">1.900 Prompts Prontos a Usar</div>
+      </div>
+    </div>
 
     <h1>De zero a agente funcional: o kit prático de requalificação que já transformou a vida de mais de 1.000 pessoas no mercado de trabalho em Portugal, sem curso longo e sem faculdade.</h1>
 
